@@ -53,7 +53,41 @@ public extension UIBezierPath {
         #if os(iOS) || os(tvOS)
         self.init(cgPath: cgPath)
         #elseif os(OSX)
-        self.init()
+        if #available(macOS 14.0, *) {
+            self.init(cgPath: cgPath)
+        } else {
+            self.init()
+            
+            cgPath.applyWithBlock { ptr in
+                let element = ptr.pointee
+                let pointsPtr = element.points
+                
+                switch element.type {
+                case .moveToPoint:
+                    move(to: pointsPtr.pointee)
+                    
+                case .addLineToPoint:
+                    line(to: pointsPtr.pointee)
+                    
+                case .addQuadCurveToPoint:
+                    let point1 = pointsPtr.pointee
+                    let point2 = pointsPtr.advanced(by: 1).pointee
+                    addQuadCurve(to: point2, controlPoint: point1)
+                    
+                case .addCurveToPoint:
+                    let point1 = pointsPtr.pointee
+                    let point2 = pointsPtr.advanced(by: 1).pointee
+                    let point3 = pointsPtr.advanced(by: 2).pointee
+                    addCurve(to: point3, controlPoint1: point1, controlPoint2: point2)
+                    
+                case .closeSubpath:
+                    close()
+                    
+                @unknown default:
+                    return
+                }
+            }
+        }
         #endif
     }
     
