@@ -62,7 +62,7 @@ struct SVGPolygon: SVGShapeElement {
             }
         }
         polylinePath.close()
-        self.svgLayer.path = polylinePath.cgPath
+        self.svgLayer.path = polylinePath.asCGPath
     }
     
     /// :nodoc:

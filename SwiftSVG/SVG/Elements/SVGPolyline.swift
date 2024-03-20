@@ -61,7 +61,7 @@ struct SVGPolyline: SVGShapeElement {
                 polylinePath.addLine(to: thisPoint)
             }
         }
-        self.svgLayer.path = polylinePath.cgPath
+        self.svgLayer.path = polylinePath.asCGPath
     }
     
     /// :nodoc:
