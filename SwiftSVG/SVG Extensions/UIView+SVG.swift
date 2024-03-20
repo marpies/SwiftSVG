@@ -52,7 +52,7 @@ public extension UIView {
         self.init()
         let svgLayer = SVGLayer()
         let pathPath = UIBezierPath(pathString: pathString)
-        svgLayer.path = pathPath.cgPath
+        svgLayer.path = pathPath.asCGPath
         #if os(iOS) || os(tvOS)
         self.layer.addSublayer(svgLayer)
         #elseif os(OSX)

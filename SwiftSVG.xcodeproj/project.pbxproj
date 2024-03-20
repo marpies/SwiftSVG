@@ -132,6 +132,7 @@
 		66F9844C20EF532600A2CBEF /* Unown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9844A20EF511F00A2CBEF /* Unown.swift */; };
 		8AC4DBEA1CB37EA700137DC9 /* CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4DBE91CB37EA700137DC9 /* CrossPlatform.swift */; };
 		A738B2921FD252A9001CF969 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A738B2911FD252A9001CF969 /* Identifiable.swift */; };
+		C33D691A2BAB0348008BF680 /* UIBezierPath+CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D69192BAB0348008BF680 /* UIBezierPath+CrossPlatform.swift */; };
 		D9870F27216628A900B47813 /* CGPathPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E99B31EF8C72900839918 /* CGPathPoints.swift */; };
 		E8235A5F22F260E000E8F1B3 /* cssColorNames.json in Resources */ = {isa = PBXBuildFile; fileRef = E8235A5E22F260E000E8F1B3 /* cssColorNames.json */; };
 		E8235A6122F2614000E8F1B3 /* Dictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8235A6022F2614000E8F1B3 /* Dictionary+JSON.swift */; };
@@ -234,6 +235,7 @@
 		9E245B6A1AAE383200472F5A /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		9E245BDA1AAE3FE000472F5A /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		A738B2911FD252A9001CF969 /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Identifiable.swift; path = Attributes/Identifiable.swift; sourceTree = "<group>"; };
+		C33D69192BAB0348008BF680 /* UIBezierPath+CrossPlatform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+CrossPlatform.swift"; sourceTree = "<group>"; };
 		E8235A5E22F260E000E8F1B3 /* cssColorNames.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = cssColorNames.json; sourceTree = "<group>"; };
 		E8235A6022F2614000E8F1B3 /* Dictionary+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+JSON.swift"; sourceTree = "<group>"; };
 		E8AFE31B22EBD6F600BD1672 /* Print.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Print.swift; sourceTree = "<group>"; };
@@ -513,6 +515,7 @@
 				17CCE7341EE64DAD007FA5AD /* Parser */,
 				8AC4DBE91CB37EA700137DC9 /* CrossPlatform.swift */,
 				17D5706F1E1F4285007CED68 /* NSBezierPath+CrossPlatform.swift */,
+				C33D69192BAB0348008BF680 /* UIBezierPath+CrossPlatform.swift */,
 			);
 			path = SwiftSVG;
 			sourceTree = "<group>";
@@ -741,6 +744,7 @@
 				380210241F3B881E007D236B /* Data+CacheKey.swift in Sources */,
 				380FED561F0491E200EDB255 /* SVGContainerElement.swift in Sources */,
 				38311C4D1F1738AB00E876EC /* SVGCache.swift in Sources */,
+				C33D691A2BAB0348008BF680 /* UIBezierPath+CrossPlatform.swift in Sources */,
 				A738B2921FD252A9001CF969 /* Identifiable.swift in Sources */,
 				176BC9AD1EE48CE800F7B54C /* SVGCircle.swift in Sources */,
 				39B8D8AA1B3C32DD009DAF60 /* UIColor+Extensions.swift in Sources */,
@@ -847,7 +851,7 @@
 				);
 				INFOPLIST_FILE = SwiftSVGFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
@@ -876,7 +880,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = SwiftSVGFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.straussmade.$(PRODUCT_NAME:rfc1034identifier)";

@@ -110,7 +110,7 @@ final class SVGLine: SVGShapeElement {
         let linePath = UIBezierPath()
         linePath.move(to: self.start)
         linePath.addLine(to: self.end)
-        self.svgLayer.path = linePath.cgPath
+        self.svgLayer.path = linePath.asCGPath
         container.containerLayer.addSublayer(self.svgLayer)
     }
     

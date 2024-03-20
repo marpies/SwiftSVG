@@ -32,7 +32,7 @@ import AppKit
 
 public extension NSBezierPath {
     
-    var cgPath: CGPath {
+    var asCGPath: CGPath {
         get {
             let path = CGMutablePath()
             let points = NSPointArray.allocate(capacity: 3)
